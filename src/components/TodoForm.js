@@ -15,7 +15,7 @@ function TodoForm({ addTodo }){
     function handleSubmit(e) {
       e.preventDefault();  
       if (todo.task.trim()) {
-        addTodo({...todo });
+        addTodo({...todo, id:Date.now()});
         setTodo({...todo, task: "" })
       }
     }
